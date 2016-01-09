@@ -2,7 +2,7 @@
 
 Login_controler::Login_controler()
 {
-
+   // w.show();
 }
 
 User Login_controler::login_user(QString username, QString password){
@@ -13,6 +13,9 @@ User Login_controler::login_user(QString username, QString password){
 
     if(user.login == username && user.password == password){
        qDebug() << "Pomyslnie zalogowano uzytkownika: "<<user.login <<" z uprawnieniami: "<<user.privilages<<endl;
+       qDebug() << "Emiting signal login_ok()!\n";
+       emit login_ok();
+       qDebug() << "Signal emited!\n";
     }
 
     else{
@@ -20,3 +23,7 @@ User Login_controler::login_user(QString username, QString password){
     }
     return user;
 }
+
+//Login_controler::~Login_controler(){
+
+//}

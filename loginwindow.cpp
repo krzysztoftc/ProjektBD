@@ -16,12 +16,17 @@ LoginWindow::~LoginWindow()
 
 void LoginWindow::on_pushButton_clicked()
 {
-    login_controler.login_user(ui->lineEdit->text(),ui->lineEdit_2->text());
+    login_controler->login_user(ui->lineEdit->text(),ui->lineEdit_2->text());
 }
 
 
 void LoginWindow::on_lineEdit_2_returnPressed()
 {
-    login_controler.login_user(ui->lineEdit->text(),ui->lineEdit_2->text());
+    login_controler->login_user(ui->lineEdit->text(),ui->lineEdit_2->text());
+}
+
+void LoginWindow::login_ok(){
+    qDebug()<<"Login ok slot\n";
+    this->close();
 }
 
