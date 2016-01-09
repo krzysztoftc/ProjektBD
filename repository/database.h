@@ -22,4 +22,5 @@ public:
     QSqlQuery execQuery (QString query);
 };
 
+
 #endif // DATABASE_H

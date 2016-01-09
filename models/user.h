@@ -1,11 +1,17 @@
 #ifndef USER_H
 #define USER_H
 
+#include <QString>
 
-class user
+class User
 {
 public:
-    user();
+    QString login;
+    QString password;
+    int privilages;
+
+    User();
+    User(QString login, QString password, int privilages);
 };
 
 #endif // USER_H

@@ -6,17 +6,23 @@ Database::Database()
     db.setDatabaseName("Ksiegowosc");
     db.setUserName(user);
     db.setPassword(password);
+    qDebug() << "here1\n";
+    db.open();
+    qDebug() << "here2\n";
+    db.close();
+    qDebug() << "here3\n";
 }
 
 int Database::connect(){
+    qDebug() << "here4\n";
     if (!db.open())
     {
-        qDebug() << "Błąd: nie można się połączyć z bazą!";
+        qDebug() << "Blad: nie mozna sie polaczyć z baza!";
         return 0;
     }
     else
     {
-        qDebug() << "Nawiązano połączenie z bazą danych.";
+        qDebug() << "Nawiazano polaczenie z baza danych.";
         return 1;
     }
 }
