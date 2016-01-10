@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "controlers/login_controler.h"
 #include <QObject>
+#include <QMessageBox>
 
 namespace Ui {
 class LoginWindow;
@@ -29,6 +30,7 @@ private slots:
 
 public slots:
     void login_ok();
+    void login_incorect();
 
 private:
     Ui::LoginWindow *ui;

@@ -3,16 +3,22 @@
 
 #include <QPixmap>
 
-choose_window::choose_window(QWidget *parent) :
+Choose_window::Choose_window(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::choose_window)
 {
 
     ui->setupUi(this);
 
+
 }
 
-choose_window::~choose_window()
+Choose_window::~Choose_window()
 {
     delete ui;
+}
+
+void Choose_window::loged_user(User user){
+    this->show();
+    loged_user = user;
 }

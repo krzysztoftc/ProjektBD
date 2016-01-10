@@ -30,3 +30,7 @@ void LoginWindow::login_ok(){
     this->close();
 }
 
+void LoginWindow::login_incorect(){
+  QMessageBox::critical(this, "Błąd logowania", "Podałeś złą parę login/hasło");
+}
+

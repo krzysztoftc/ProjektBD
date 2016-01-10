@@ -6,11 +6,11 @@ Database::Database()
     db.setDatabaseName("Ksiegowosc");
     db.setUserName(user);
     db.setPassword(password);
-    qDebug() << "here1\n";
-    db.open();
-    qDebug() << "here2\n";
-    db.close();
-    qDebug() << "here3\n";
+//    qDebug() << "here1\n";
+//    db.open();
+//    qDebug() << "here2\n";
+//    db.close();
+//    qDebug() << "here3\n";
 }
 
 int Database::connect(){
