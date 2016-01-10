@@ -17,27 +17,35 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        loginwindow.cpp \
+        windows/loginwindow.cpp \
     repository/database.cpp \
     daos/dao.cpp \
     daos/user_login_dao.cpp \
     controlers/login_controler.cpp \
     models/user.cpp \
     windows/choose_module.cpp \
-    windows/choose_window.cpp
+    windows/choose_window.cpp \
+    windows/acountant_module.cpp \
+    windows/dialog_raport.cpp \
 
-HEADERS  += loginwindow.h \
+
+HEADERS  += windows/loginwindow.h \
     repository/database.h \
     daos/dao.h \
     daos/user_login_dao.h \
     controlers/login_controler.h \
     models/user.h \
     windows/choose_module.h \
-    windows/choose_window.h
+    windows/choose_window.h \
+    windows/acountant_module.h \
+    windows/dialog_raport.h \
 
-FORMS    += loginwindow.ui \
+FORMS    += windows/loginwindow.ui \
     windows/choose_module.ui \
-    windows/choose_window.ui
+    windows/choose_window.ui \
+    windows/acountant_module.ui \
+    windows/dialog_raport.ui \
+
 
 INCLUDEPATH += /usr/include/mysql
 

@@ -4,7 +4,7 @@ User::User()
 {
     login ="";
     password = "";
-    privilages = 0;
+    privilages = 99;
 }
 
 User::User(QString login, QString password, int privilages){

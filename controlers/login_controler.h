@@ -5,7 +5,7 @@
 #include "models/user.h"
 #include <QString>
 #include <QObject>
-#include "loginwindow.h"
+#include "windows/loginwindow.h"
 #include <QMessageBox>
 
 class Login_controler: public QObject
