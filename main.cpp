@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     QObject::connect(&login_controler, SIGNAL(login_ok(User)), &cw, SLOT(loged_user_slot(User)));
 
     w.show();
+    //cw.loged_user_slot(User ("kowalski","haslo",1));
 
     return a.exec();
 }

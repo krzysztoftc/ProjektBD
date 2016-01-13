@@ -15,7 +15,10 @@ Acountant_module::~Acountant_module()
 
 void Acountant_module::on_pushButton_clicked()
 {
-//    Dialog_raport dialog_raport;
+    Dialog_raport dialog_raport(this);
+    dialog_raport.exec();
+}
 
-   // dialog_raport.show();
+void Acountant_module::generate_raport(QDate from, QDate to){
+
 }

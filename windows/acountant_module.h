@@ -12,7 +12,7 @@ class Acountant_module : public QMainWindow
 {
     Q_OBJECT
 
- //Dialog_raport dialog_raport;
+    //Dialog_raport dialog_raport;
 
 public:
     explicit Acountant_module(QWidget *parent = 0);
@@ -20,6 +20,9 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+public slots:
+    void generate_raport (QDate from, QDate to);
 
 private:
     Ui::Acountant_module *ui;

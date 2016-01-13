@@ -23,10 +23,12 @@ SOURCES += main.cpp\
     daos/user_login_dao.cpp \
     controlers/login_controler.cpp \
     models/user.cpp \
-    windows/choose_module.cpp \
     windows/choose_window.cpp \
     windows/acountant_module.cpp \
     windows/dialog_raport.cpp \
+    windows/project_manager_module.cpp \
+    models/person.cpp \
+    models/test.cpp
 
 
 HEADERS  += windows/loginwindow.h \
@@ -35,16 +37,18 @@ HEADERS  += windows/loginwindow.h \
     daos/user_login_dao.h \
     controlers/login_controler.h \
     models/user.h \
-    windows/choose_module.h \
     windows/choose_window.h \
     windows/acountant_module.h \
     windows/dialog_raport.h \
+    windows/project_manager_module.h \
+    models/person.h \
+    models/test.h
 
 FORMS    += windows/loginwindow.ui \
-    windows/choose_module.ui \
     windows/choose_window.ui \
     windows/acountant_module.ui \
     windows/dialog_raport.ui \
+    windows/project_manager_module.ui
 
 
 INCLUDEPATH += /usr/include/mysql

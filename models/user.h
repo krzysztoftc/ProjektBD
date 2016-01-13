@@ -1,9 +1,11 @@
 #ifndef USER_H
 #define USER_H
 
+#include "models/person.h"
 #include <QString>
 
-class User
+
+class User :public Person
 {
 public:
     QString login;
