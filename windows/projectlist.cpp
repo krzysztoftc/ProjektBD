@@ -49,3 +49,8 @@ void ProjectList::on_pushButton_clicked()
 {
     this->close();
 }
+
+void ProjectList::on_pushButton_2_clicked()
+{
+
+}
