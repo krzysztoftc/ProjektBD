@@ -8,15 +8,15 @@ namespace Ui {
 class Acountant_module;
 }
 
-class Acountant_module : public QMainWindow
+class AcountantModule : public QMainWindow
 {
     Q_OBJECT
 
     //Dialog_raport dialog_raport;
 
 public:
-    explicit Acountant_module(QWidget *parent = 0);
-    ~Acountant_module();
+    explicit AcountantModule(QWidget *parent = 0);
+    ~AcountantModule();
 
 private slots:
     void on_pushButton_clicked();

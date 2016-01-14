@@ -12,7 +12,7 @@ class Login_controler: public QObject
 {
     Q_OBJECT
    // LoginWindow w;
-    User_login_dao dao;
+    UserLoginDao dao;
     User loged_user;
 
 public:

@@ -10,17 +10,17 @@ namespace Ui {
 class choose_window;
 }
 
-class Choose_window : public QMainWindow
+class ChooseWindow : public QMainWindow
 {
     Q_OBJECT
 
     User loged_user;
-    Acountant_module am;
+    AcountantModule am;
 
 
 public:
-    explicit Choose_window(QWidget *parent = 0);
-    ~Choose_window();
+    explicit ChooseWindow(QWidget *parent = 0);
+    ~ChooseWindow();
 
 public slots:
     void loged_user_slot(User user);

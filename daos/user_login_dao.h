@@ -5,10 +5,10 @@
 #include "dao.h"
 #include "../models/user.h"
 
-class User_login_dao : public Dao
+class UserLoginDao : public Dao
 {
 public:
-    User_login_dao();
+    UserLoginDao();
     QSqlQuery get_user_data(QString username);
     User get_user(QString username);
 };

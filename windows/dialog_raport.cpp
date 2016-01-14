@@ -1,7 +1,7 @@
 #include "dialog_raport.h"
 #include "ui_dialog_raport.h"
 
-Dialog_raport::Dialog_raport(QWidget *parent) :
+DialogRaport::DialogRaport(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog_raport)
 {
@@ -12,7 +12,7 @@ Dialog_raport::Dialog_raport(QWidget *parent) :
     emit selected_period(ui->dateEdit->date(), ui->dateEdit_2->date());
 }
 
-Dialog_raport::~Dialog_raport()
+DialogRaport::~DialogRaport()
 {
     delete ui;
 }

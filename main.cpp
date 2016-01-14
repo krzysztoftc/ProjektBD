@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Login_controler login_controler;
-    Choose_window cw;
+    ChooseWindow cw;
 
     LoginWindow w;
     w.login_controler = &login_controler;

@@ -3,7 +3,7 @@
 
 #include <QPixmap>
 
-Choose_window::Choose_window(QWidget *parent) :
+ChooseWindow::ChooseWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::choose_window)
 {
@@ -13,17 +13,17 @@ Choose_window::Choose_window(QWidget *parent) :
 
 }
 
-Choose_window::~Choose_window()
+ChooseWindow::~ChooseWindow()
 {
     delete ui;
 }
 
-void Choose_window::loged_user_slot(User user){
+void ChooseWindow::loged_user_slot(User user){
     this->show();
     loged_user = user;
 }
 
-void Choose_window::on_pushButton_clicked()
+void ChooseWindow::on_pushButton_clicked()
 {
     if (loged_user.privilages < 2){
     emit sig_open_acountat_mod(loged_user);

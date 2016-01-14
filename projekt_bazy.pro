@@ -28,7 +28,9 @@ SOURCES += main.cpp\
     windows/dialog_raport.cpp \
     windows/project_manager_module.cpp \
     models/person.cpp \
-    models/test.cpp
+    models/test.cpp \
+    windows/projectlist.cpp \
+    daos/projectsddao.cpp
 
 
 HEADERS  += windows/loginwindow.h \
@@ -42,13 +44,17 @@ HEADERS  += windows/loginwindow.h \
     windows/dialog_raport.h \
     windows/project_manager_module.h \
     models/person.h \
-    models/test.h
+    models/test.h \
+    windows/projectlist.h \
+    daos/projectsddao.h
 
 FORMS    += windows/loginwindow.ui \
     windows/choose_window.ui \
     windows/acountant_module.ui \
     windows/dialog_raport.ui \
-    windows/project_manager_module.ui
+    windows/project_manager_module.ui \
+    windows/tableview.ui \
+    windows/projectlist.ui
 
 
 INCLUDEPATH += /usr/include/mysql
