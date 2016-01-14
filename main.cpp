@@ -3,6 +3,7 @@
 
 #include "windows/choose_window.h"
 #include "models/user.h"
+#include "windows/projectlist.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,6 +20,9 @@ int main(int argc, char *argv[])
 
     w.show();
     //cw.loged_user_slot(User ("kowalski","haslo",1));
+
+    ProjectList pl;
+    pl.show();
 
     return a.exec();
 }
