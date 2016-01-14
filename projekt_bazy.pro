@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     models/person.cpp \
     models/test.cpp \
     windows/projectlist.cpp \
-    daos/projectsddao.cpp
+    daos/projectsddao.cpp \
+    models/project.cpp
 
 
 HEADERS  += windows/loginwindow.h \
@@ -46,14 +47,14 @@ HEADERS  += windows/loginwindow.h \
     models/person.h \
     models/test.h \
     windows/projectlist.h \
-    daos/projectsddao.h
+    daos/projectsddao.h \
+    models/project.h
 
 FORMS    += windows/loginwindow.ui \
     windows/choose_window.ui \
     windows/acountant_module.ui \
     windows/dialog_raport.ui \
     windows/project_manager_module.ui \
-    windows/tableview.ui \
     windows/projectlist.ui
 
 
