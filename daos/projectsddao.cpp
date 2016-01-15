@@ -34,3 +34,29 @@ QList<Project> ProjectsDdao::get_project_list(){
 
     return pl;
 }
+
+QSqlQuery ProjectsDdao::get_pm_list_q(){
+    QString q = "SELECT imie, nazwisko, pesel, przelozony, stanowisko FROM pracownicy WHERE stanowisko like 'PM' and jestZatrudniony = true;";
+    Dao::connect();
+    QSqlQuery answer = Dao::execQuery(q);
+    Dao::disconnect();
+    return answer;
+}
+
+QList<Employee> ProjectsDdao::get_pm_list(){
+    QSqlQuery a = get_pm_list_q();
+    QList<Employee> el;
+
+    while(a.next()){
+        Employee e;
+        e.name = a.value(0).toString();
+        e.surname = a.value(1).toString();
+        e.pesel = a.value(2).toLongLong();
+        e.superior = a.value(3).toLongLong();
+        e.position = a.value(4).toString();
+        e.active = true;
+        el.append(e);
+   }
+
+    return el;
+}
