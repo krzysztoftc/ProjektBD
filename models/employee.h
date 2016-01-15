@@ -1,6 +1,8 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
+#include <QString>
+#include "person.h"
 
 class Employee : public Person
 {
