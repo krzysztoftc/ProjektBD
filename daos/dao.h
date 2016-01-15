@@ -11,6 +11,7 @@ public:
     int connect();
     void disconnect();
     QSqlQuery execQuery(QString query);
+
 };
 
 #endif // DAO_H

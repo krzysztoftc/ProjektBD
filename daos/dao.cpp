@@ -22,3 +22,4 @@ QSqlQuery Dao::execQuery(QString query){
 
 
 
+

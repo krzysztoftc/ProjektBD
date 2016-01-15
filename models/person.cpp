@@ -1,6 +1,6 @@
 #include "person.h"
 
-Person::Person(long pesel, QString name, QString surname)
+Person::Person(long long pesel, QString name, QString surname)
 {
     this->pesel = pesel;
     this->name = name;

@@ -32,7 +32,8 @@ SOURCES += main.cpp\
     windows/projectlist.cpp \
     daos/projectsddao.cpp \
     models/project.cpp \
-    windows/dialognewproject.cpp
+    windows/dialognewproject.cpp \
+    models/employee.cpp
 
 
 HEADERS  += windows/loginwindow.h \
@@ -50,7 +51,8 @@ HEADERS  += windows/loginwindow.h \
     windows/projectlist.h \
     daos/projectsddao.h \
     models/project.h \
-    windows/dialognewproject.h
+    windows/dialognewproject.h \
+    models/employee.h
 
 FORMS    += windows/loginwindow.ui \
     windows/choose_window.ui \

@@ -8,9 +8,9 @@ class Person
 
 public:
      Person();
-     Person(long pesel, QString name, QString surname);
+     Person(long long pesel, QString name, QString surname);
 
-    long pesel;
+    long long pesel;
     QString name;
     QString surname;
 

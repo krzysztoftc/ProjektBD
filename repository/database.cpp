@@ -34,3 +34,4 @@ void Database::disconnect(){
 QSqlQuery Database::execQuery(QString query){
     return db.exec(query);
 }
+

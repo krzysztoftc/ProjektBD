@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "daos/projectsddao.h"
 #include "models/project.h"
+#include "windows/dialognewproject.h"
 
 namespace Ui {
 class ProjectList;
@@ -21,6 +22,8 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
+    void slot_update_projects_list();
 
 private:
     Ui::ProjectList *ui;

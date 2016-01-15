@@ -8,7 +8,7 @@ class Employee : public Person
 {
 public:
     Employee();
-    long superior;
+    long long superior;
     bool active;
     QString position;
 };

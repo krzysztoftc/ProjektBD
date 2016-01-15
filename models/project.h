@@ -10,7 +10,7 @@ public:
     Project(int project_id, QString name, QString description, int project_manager, Person manager);
     QString name;
     QString description;
-    int project_manager;
+    long project_manager;
     int project_id;
     Person manager;
 };

@@ -52,5 +52,12 @@ void ProjectList::on_pushButton_clicked()
 
 void ProjectList::on_pushButton_2_clicked()
 {
+    DialogNewProject d;
+    connect(&d,SIGNAL(sig_update_projects_list()),this,SLOT(slot_update_projects_list()));
+    d.exec();
+}
 
+void ProjectList::slot_update_projects_list(){
+    qDebug()<<"Signal getted";
+    update_list();
 }

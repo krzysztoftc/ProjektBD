@@ -52,6 +52,8 @@ QList<Employee> ProjectsDdao::get_pm_list(){
         e.name = a.value(0).toString();
         e.surname = a.value(1).toString();
         e.pesel = a.value(2).toLongLong();
+        qDebug()<<"PM Pesel: "<<a.value(2);
+        qDebug()<<"PM Pesel: "<<e.pesel;
         e.superior = a.value(3).toLongLong();
         e.position = a.value(4).toString();
         e.active = true;
@@ -59,4 +61,18 @@ QList<Employee> ProjectsDdao::get_pm_list(){
    }
 
     return el;
+}
+
+int ProjectsDdao::add_project(Project p){
+    QString q =
+    "INSERT INTO projekty (nazwaProjektu, opisProjektu, projectManager) VALUES ('"
+            +p.name + "', '" + p.description + "', "+ QString::number(p.manager.pesel) +");";
+
+   qDebug()<<"PM: "<<p.manager.name<<" "<<p.manager.surname<<" " <<p.manager.pesel<<" "<<p.project_manager;
+   qDebug()<<q;
+   QSqlQuery answer = execQuery(q);
+   qDebug()<<"Dodano project z id: ";// <<answer.lastInsertId();
+
+
+    return 0;
 }
