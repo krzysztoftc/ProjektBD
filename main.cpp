@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     Login_controler login_controler;
     ChooseWindow cw;
 
+    Database db;
     LoginWindow w;
     w.login_controler = &login_controler;
 

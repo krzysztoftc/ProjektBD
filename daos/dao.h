@@ -5,7 +5,7 @@
 
 class Dao
 {
-    Database database;
+    QSqlDatabase database;
 public:
     Dao();
     int connect();

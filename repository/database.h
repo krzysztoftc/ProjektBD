@@ -5,6 +5,7 @@
 #include <QString>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QtSql>
 #include <QDebug>
 
 class Database
@@ -12,14 +13,11 @@ class Database
     QString server_addres = "86.105.49.166";
     QString user = "test";
     QString password = "123456789";
+    QString databaseName="Ksiegowosc";
 
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
 public:
     Database();
-    int connect();
-    void disconnect();
-    QSqlQuery execQuery (QString query);
 };
 
 
