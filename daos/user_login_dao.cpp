@@ -6,9 +6,7 @@ UserLoginDao::UserLoginDao()
 }
 
 QSqlQuery UserLoginDao::get_user_data(QString username){
-   Dao::connect();
    QSqlQuery answer = Dao::execQuery("Select iduzytkownicy, idPracownika, idPoziomDostepu, login, haslo FROM uzytkownicy WHERE login like '"+username+"';");
-   Dao::disconnect();
    return answer;
 }
 
