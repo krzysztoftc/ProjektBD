@@ -55,6 +55,7 @@ void ProjectList::on_pushButton_2_clicked()
     DialogNewProject d;
     connect(&d,SIGNAL(sig_update_projects_list()),this,SLOT(slot_update_projects_list()));
     d.exec();
+//    update_list();
 }
 
 void ProjectList::slot_update_projects_list(){

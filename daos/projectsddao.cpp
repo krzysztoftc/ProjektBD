@@ -7,9 +7,7 @@ ProjectsDdao::ProjectsDdao()
 
 QSqlQuery ProjectsDdao::get_project_list_q(){
     QString q = "SELECT idProjekty, nazwaProjektu, opisProjektu, projectManager, imie, nazwisko FROM projekty JOIN pracownicy ON projekty.projectManager = pracownicy.pesel WHERE 1";
-    Dao::connect();
     QSqlQuery answer = Dao::execQuery(q);
-    Dao::disconnect();
     return answer;
 }
 
@@ -37,9 +35,7 @@ QList<Project> ProjectsDdao::get_project_list(){
 
 QSqlQuery ProjectsDdao::get_pm_list_q(){
     QString q = "SELECT imie, nazwisko, pesel, przelozony, stanowisko FROM pracownicy WHERE stanowisko like 'PM' and jestZatrudniony = true;";
-    Dao::connect();
     QSqlQuery answer = Dao::execQuery(q);
-    Dao::disconnect();
     return answer;
 }
 

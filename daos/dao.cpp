@@ -6,16 +6,16 @@ Dao::Dao()
 }
 
 int Dao::connect(){
-   return database.connect();
+   return Database::getInstance().connect();
 }
 
 void Dao::disconnect(){
-    database.disconnect();
+    Database::getInstance().disconnect();
 }
 
 QSqlQuery Dao::execQuery(QString query){
     connect();
-    QSqlQuery answer = database.execQuery(query);
+    QSqlQuery answer = Database::getInstance().execQuery(query);
     disconnect();
     return answer;
 }

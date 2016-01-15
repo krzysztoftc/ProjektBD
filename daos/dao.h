@@ -5,7 +5,6 @@
 
 class Dao
 {
-    Database database;
 public:
     Dao();
     int connect();
