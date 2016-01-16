@@ -20,6 +20,8 @@ public:
     QList <Employee> get_pm_list();
 
     int add_project(Project p);
+
+    int update_project(Project p);
 };
 
 #endif // PROJECTSDDAO_H

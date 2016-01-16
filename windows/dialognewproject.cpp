@@ -28,6 +28,33 @@ void DialogNewProject::update_pm_list(){
 
 void DialogNewProject::on_pushButton_clicked()
 {
+    accept_changes(false);
+}
+
+void DialogNewProject::on_pushButton_2_clicked()
+{
+    this->close();
+}
+
+void DialogNewProject::make_edit(Project p){
+    this->p = p;
+    ui->pushButton->setText("Zapisz");
+    ui->lineEdit->setText(p.name);
+    ui->textEdit->setText(p.description);
+    int index = ui->comboBox->findData(QVariant((long long)p.project_manager));
+    ui->comboBox->setCurrentIndex(index);
+    qDebug()<<"Pm Pesel: "<<p.project_manager<<" Selecting pm on index: "<<index;
+    disconnect(ui->pushButton, SIGNAL(clicked(bool)), this, SLOT(on_pushButton_clicked()));
+    connect (ui->pushButton, SIGNAL(clicked(bool)), this, SLOT(on_editButton_clicked()));
+}
+
+void DialogNewProject::on_editButton_clicked(){
+    qDebug()<<"Edit";
+
+    accept_changes(true);
+}
+
+void DialogNewProject::accept_changes(bool edit_not_add){
     QString project_name = ui->lineEdit->text();
     QString project_desc = ui->textEdit->toPlainText();
     int selected_pm = ui->comboBox->currentIndex();
@@ -37,20 +64,17 @@ void DialogNewProject::on_pushButton_clicked()
     }
     else{
         Employee pm = pm_list.at(selected_pm-1);
-        Project p;
         p.name = project_name;
         p.description = project_desc;
         p.manager = pm;
         p.project_manager = pm.pesel;
 
-        dao.add_project(p);
+        if(edit_not_add) dao.update_project(p);
+        else dao.add_project(p);
+
+        qDebug()<<"Update sig";
         emit sig_update_projects_list();
         this->close();
     }
 
-}
-
-void DialogNewProject::on_pushButton_2_clicked()
-{
-    this->close();
 }

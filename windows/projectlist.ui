@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>ProjectList</class>
  <widget class="QWidget" name="ProjectList">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -21,6 +24,12 @@
      <width>441</width>
      <height>531</height>
     </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
    </property>
    <property name="sortingEnabled">
     <bool>true</bool>
@@ -68,6 +77,22 @@
    </property>
    <property name="text">
     <string>Nowy</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>480</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edytuj</string>
    </property>
   </widget>
  </widget>
