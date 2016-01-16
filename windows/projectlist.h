@@ -16,6 +16,7 @@ class ProjectList : public QWidget
 
 public:
     explicit ProjectList(QWidget *parent = 0);
+
     ~ProjectList();
 
 private slots:
@@ -25,10 +26,17 @@ private slots:
 
     void slot_update_projects_list();
 
+    void on_tableWidget_itemSelectionChanged();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::ProjectList *ui;
-    void update_list();
+
     ProjectsDdao dao;
+    QVector<Project> list;
+
+    void update_list();
 };
 
 #endif // PROJECTLIST_H

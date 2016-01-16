@@ -13,6 +13,7 @@ ProjectList::ProjectList(QWidget *parent) :
     ui(new Ui::ProjectList)
 {
     ui->setupUi(this);
+
     update_list();
 }
 
@@ -22,13 +23,14 @@ ProjectList::~ProjectList()
 }
 
 void ProjectList::update_list(){
-    QVector<Project> list;
     list = dao.get_project_list().toVector();
     qDebug()<<"Getted "<<list.size()<<" projects\n";
 
     QVectorIterator<Project> it(list);
     it.toFront();
 
+    while(ui->tableWidget->rowCount()>0)
+           ui->tableWidget->removeRow(0);
 
    // while (it.hasNext()){
     foreach (const Project &p, list) {
@@ -61,4 +63,19 @@ void ProjectList::on_pushButton_2_clicked()
 void ProjectList::slot_update_projects_list(){
     qDebug()<<"Signal getted";
     update_list();
+}
+
+void ProjectList::on_tableWidget_itemSelectionChanged()
+{
+    ui->pushButton_3->setEnabled(true);
+}
+
+void ProjectList::on_pushButton_3_clicked()
+{
+    Project p = list.at(ui->tableWidget->currentRow());
+    qDebug()<<"Selected project manager: "<<p.manager.name<<" "<<p.manager.surname;
+    DialogNewProject d;
+    connect(&d,SIGNAL(sig_update_projects_list()),this,SLOT(slot_update_projects_list()));
+    d.make_edit(p);
+    d.exec();
 }

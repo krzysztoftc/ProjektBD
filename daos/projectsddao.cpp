@@ -18,6 +18,7 @@ QList<Project> ProjectsDdao::get_project_list(){
     while(a.next()){
         Project p;
         p.project_id = a.value(0).toInt();
+        qDebug()<<"Project id: "<<p.project_id;
         p.name = a.value(1).toString();
         p.description = a.value(2).toString();
         p.project_manager = a.value(3).toLongLong();
@@ -69,6 +70,19 @@ int ProjectsDdao::add_project(Project p){
    QSqlQuery answer = execQuery(q);
    qDebug()<<"Dodano project z id: ";// <<answer.lastInsertId();
 
+
+    return 0;
+}
+
+int ProjectsDdao::update_project(Project p){
+    QString q =
+    "UPDATE projekty SET nazwaProjektu = '"+p.name+"', opisProjektu = '"+p.description +
+            "', projectManager = '" + QString::number(p.manager.pesel) +"' WHERE idProjekty = "+
+            QString::number(p.project_id) + ";";
+
+    qDebug()<<"Project id: "<<p.project_id<< " Update query: "<<q;
+
+    execQuery(q);
 
     return 0;
 }
