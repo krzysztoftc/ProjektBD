@@ -33,7 +33,17 @@ SOURCES += main.cpp\
     daos/projectsddao.cpp \
     models/project.cpp \
     windows/dialognewproject.cpp \
-    models/employee.cpp
+    models/employee.cpp \
+    models/clientcontract.cpp \
+    models/client.cpp \
+    models/cantactdetails.cpp \
+    models/invoicesender.cpp \
+    models/invoice.cpp \
+    daos/clientcontractdao.cpp \
+    daos/clientdao.cpp \
+    daos/contactdetailsdao.cpp \
+    daos/invoicesenderdao.cpp \
+    daos/invoicedao.cpp
 
 
 HEADERS  += windows/loginwindow.h \
@@ -52,7 +62,17 @@ HEADERS  += windows/loginwindow.h \
     daos/projectsddao.h \
     models/project.h \
     windows/dialognewproject.h \
-    models/employee.h
+    models/employee.h \
+    models/clientcontract.h \
+    models/client.h \
+    models/cantactdetails.h \
+    models/invoicesender.h \
+    models/invoice.h \
+    daos/clientcontractdao.h \
+    daos/clientdao.h \
+    daos/contactdetailsdao.h \
+    daos/invoicesenderdao.h \
+    daos/invoicedao.h
 
 FORMS    += windows/loginwindow.ui \
     windows/choose_window.ui \
