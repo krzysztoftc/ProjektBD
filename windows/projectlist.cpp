@@ -5,7 +5,7 @@
 #include <QListIterator>
 #include <String>
 #include <QDebug>
-
+#include "daos/invoicedao.h"
 using namespace std;
 
 ProjectList::ProjectList(QWidget *parent) :

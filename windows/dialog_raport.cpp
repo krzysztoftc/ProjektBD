@@ -10,9 +10,18 @@ DialogRaport::DialogRaport(QWidget *parent) :
     ui->dateEdit_2->setDate(QDate().currentDate());
 
     emit selected_period(ui->dateEdit->date(), ui->dateEdit_2->date());
+
+
 }
 
 DialogRaport::~DialogRaport()
 {
     delete ui;
+}
+
+
+void DialogRaport::on_buttonBox_accepted()
+{
+    startDate=ui->dateEdit->date();
+    endDate=ui->dateEdit_2->date();
 }

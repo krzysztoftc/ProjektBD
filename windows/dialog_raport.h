@@ -16,9 +16,14 @@ class DialogRaport : public QDialog
 public:
     explicit DialogRaport(QWidget *parent = 0);
     ~DialogRaport();
-
+    QDate startDate;
+    QDate endDate;
 signals:
     void selected_period(QDate from, QDate to);
+
+
+private slots:
+    void on_buttonBox_accepted();
 
 private:
     Ui::Dialog_raport *ui;

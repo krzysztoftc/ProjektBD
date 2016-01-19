@@ -2,7 +2,7 @@
 #define DAO_H
 
 #include "../repository/database.h"
-
+#include <QList>
 class Dao
 {
     QSqlDatabase database;
