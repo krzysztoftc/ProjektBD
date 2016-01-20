@@ -30,7 +30,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/graphics/boss.png</pixmap>
+     <pixmap resource="../images.qrc">:/new/images/graphics/boss.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -52,7 +52,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/graphics/accountant.jpg</pixmap>
+     <pixmap resource="../images.qrc">:/new/images/graphics/accountant.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -74,7 +74,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/graphics/team_lider.jpg</pixmap>
+     <pixmap resource="../images.qrc">:/new/images/graphics/team_lider.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -96,7 +96,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/graphics/programmer.png</pixmap>
+     <pixmap resource="../images.qrc">:/new/images/graphics/programmer.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -113,6 +113,25 @@
     </property>
     <property name="text">
      <string>Księgowa</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>200</width>
+      <height>200</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>230</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Prezes</string>
     </property>
     <property name="iconSize">
      <size>
@@ -138,6 +157,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../images.qrc"/>
+ </resources>
  <connections/>
 </ui>

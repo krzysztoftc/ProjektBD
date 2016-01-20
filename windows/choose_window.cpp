@@ -32,3 +32,10 @@ void ChooseWindow::on_pushButton_clicked()
     else
         QMessageBox::critical(this, "Brak uprawnień", "Brak dostępu do modułu");
 }
+
+void ChooseWindow::on_pushButton_2_clicked()
+{
+    p.show();
+    p.update_list();
+}
+

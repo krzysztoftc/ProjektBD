@@ -14,6 +14,8 @@ ProjectList::ProjectList(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    connect(&d,SIGNAL(sig_update_projects_list()),this,SLOT(slot_update_projects_list()));
+
     update_list();
 }
 
@@ -54,8 +56,6 @@ void ProjectList::on_pushButton_clicked()
 
 void ProjectList::on_pushButton_2_clicked()
 {
-    DialogNewProject d;
-    connect(&d,SIGNAL(sig_update_projects_list()),this,SLOT(slot_update_projects_list()));
     d.exec();
 //    update_list();
 }
@@ -74,8 +74,9 @@ void ProjectList::on_pushButton_3_clicked()
 {
     Project p = list.at(ui->tableWidget->currentRow());
     qDebug()<<"Selected project manager: "<<p.manager.name<<" "<<p.manager.surname;
-    DialogNewProject d;
-    connect(&d,SIGNAL(sig_update_projects_list()),this,SLOT(slot_update_projects_list()));
+
     d.make_edit(p);
     d.exec();
 }
+
+

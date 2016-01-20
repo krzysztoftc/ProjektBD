@@ -5,6 +5,7 @@
 #include "models/user.h"
 #include <QMessageBox>
 #include "acountant_module.h"
+#include "projectlist.h"
 
 namespace Ui {
 class choose_window;
@@ -16,6 +17,8 @@ class ChooseWindow : public QMainWindow
 
     User loged_user;
     AcountantModule am;
+    ProjectList p;
+
 
 
 public:
@@ -29,6 +32,8 @@ signals:
     void sig_open_acountat_mod (User user);
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::choose_window *ui;
